@@ -167,8 +167,8 @@
     };
     
     App.prototype.mouseMoved = function(event) {
-    	var x = event.offsetX;
-    	var y = event.offsetY;
+    	var x = event.pageX || event.offsetX;
+    	var y = event.pageY || event.offsetY;
       this.camera.position.x = (this.width/2 - x)*0.1;
       this.camera.lookAt(this.camera.target);
     };
